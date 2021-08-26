@@ -1,8 +1,8 @@
-#include <JHPWMPCA9685.h>
+#include "JHPWMPCA9685.hpp"
 #include <math.h>
 
- PCA9685::PCA9685(int address) {
-    kI2CBus = 1 ;           // Default I2C bus for Jetson TK1
+PCA9685::PCA9685(int address, int bus) {
+    kI2CBus = bus ;           // Default I2C bus for Jetson TK1
     kI2CAddress = address ; // Defaults to 0x40 for PCA9685 ; jumper settable
     error = 0 ;
 }
